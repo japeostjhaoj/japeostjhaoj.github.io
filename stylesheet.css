@@ -1,271 +1,577 @@
+/* 基本スタイル */
 * {
-  ボックスのサイズ: 境界線ボックス;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-体 {
-  マージン: 0;
-  フォントファミリー: "ヒラギノ角ゴシック ProN";
+html {
+    scroll-behavior: smooth;
 }
 
-{
-  テキスト装飾: なし;
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
-。容器 {
-  幅: 100%;
-  パディング: 0 15px;
-  マージン: 0 自動;
+/* ナビゲーションバー */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.トップラッパー{
-  パディング: 180px 0 100px 0;
-  背景画像: url(top.png);
-  背景サイズ: カバー;
-  色: 白;
-  テキスト配置: 中央;
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
-.トップラッパー h1 {
-  不透明度: 0.7;
-  フォントサイズ: 45px;
-  文字間隔: 5px;
+.nav-links a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
 }
 
-.トップラッパーp {
-  不透明度: 0.7;
-  フォントサイズ: 16px;
-  下部マージン: 40px;
+.nav-links a:hover {
+    color: #007bff;
 }
 
-.btnラッパー{
-  テキスト配置: 中央;
+/* ヒーローセクション */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://source.unsplash.com/random/1920x1080') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
 }
 
-.btnラッパーp {
-  下マージン: 20px;
+.hero-content {
+    padding: 2rem;
 }
 
-。サインアップ {
-  背景色: #239b76;
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
 }
 
-.facebook {
-  背景色: #3b5998;
-  右マージン: 10px;
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    transition: background 0.3s ease;
 }
 
-.twitter {
-  背景色: #55acee;
+.cta-button:hover {
+    background: #0056b3;
 }
 
-.btn{
-  パディング: 8px 24px;
-  色: 白;
-  表示: インラインブロック;
-  不透明度: 0.8;
-  境界線の半径: 4px;
-  テキスト配置: 中央;
+/* サービスセクション */
+.services {
+    padding: 5rem 10%;
+    background: #f8f9fa;
 }
 
-.btn:ホバー{
-  不透明度: 1;
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
-.fa {
-  右マージン: 5px;
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-ヘッダー {
-  高さ: 65px;
-  幅: 100%;
-  背景色: rgba(34,49,52,0.9);
-  位置:固定;
-  上: 0;
-  zインデックス: 10;
+.card:hover {
+    transform: translateY(-10px);
 }
 
-.ロゴ {
-  幅: 124ピクセル;
-  上マージン: 20px;
+.card i {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
 }
 
-.header-left {
-  フロート: 左;
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+} 
+
+/* 会社概要セクション */
+.about {
+    padding: 8rem 5%;
+    background: #fff;
 }
 
-.header-right {
-  フロート: 右;
-  右マージン: -25px;
+.section-title {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 4rem;
+    letter-spacing: 0.2em;
 }
 
-.header-right {
-  行の高さ: 65px;
-  パディング: 0 25px;
-  色: 白;
-  表示: ブロック;
-  フロート: 左;
-  遷移: すべて 0.5 秒;
+.about-content {
+    display: flex;
+    gap: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
 }
 
-.header-right a:hover {
-  背景色: rgba(255,255,255,0.3);
+.about-image {
+    flex: 1;
+    position: relative;
 }
 
-.lesson-wrapper {
-  高さ: 580ピクセル;
-  パディング下部: 80px;
-  左パディング: 5%;
-  右パディング: 5%;
-  背景色: #f7f7f7;
-  テキスト配置: 中央;
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
 }
 
-.見出し{
-  パディング上部: 80px;
-  パディング下部: 50px;
-  色: #5f5d60;
+.image-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    background: #007bff;
+    opacity: 0.1;
+    border-radius: 10px;
+    z-index: 0;
 }
 
-.見出し h2 {
-  フォントの太さ: 標準;
+.about-text {
+    flex: 1;
+    padding: 2rem;
 }
 
-。レッスン {
-  フロート: 左;
-  幅: 25%;
+.subtitle {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #007bff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: block;
 }
 
-.lesson-icon {
-  位置: 相対的;
+.about-text h3 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 2rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
-.lesson-icon p {
-  位置: 絶対;
-  トップ: 37%
-  幅: 100%;
-  色: 白;
+.description {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 3rem;
+    color: #555;
 }
 
-.テキストコンテンツ{
-  幅: 80%;
-  表示: インラインブロック;
-  上マージン: 15px;
-  フォントサイズ: 13px;
-  色: #b3aeb5;
+.company-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
 }
 
-.見出し h3 {
-  フォントの太さ: 標準;
+.info-item {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-.メッセージラッパー{
-  下境界線: 1px 実線 #eee;
-  パディング下部: 80px;
-  テキスト配置: 中央;
+.info-item:hover {
+    transform: translateY(-5px);
 }
 
-。メッセージ {
-  パディング: 15px 40px;
-  背景色: #5dca88;
-  カーソル: ポインタ;
-  ボックスの影: 0px 7px #1a7940;
+.info-item .label {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.5rem;
 }
 
-.message:アクティブ{
-  位置: 相対的;
-  上: 7px;
-  ボックスシャドウ: なし;
+.info-item .value {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
 }
 
-フッター画像 {
-  幅: 125ピクセル;
+/* レスポンシブ対応 */
+@media (max-width: 968px) {
+    .about-content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .about-text {
+        padding: 0;
+    }
+
+    .about-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
 }
 
-フッター p {
-  色: #b3aeb5;
-  フォントサイズ: 12px;
+/* フォント読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap'); 
+
+/* お問い合わせセクション */
+.contact {
+    padding: 8rem 5%;
+    background: #f8f9fa;
 }
 
-フッター {
-  パディング上部: 30px;
-  パディング下部: 20px;
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
 }
 
-.メニューアイコン{
-  色: 白;
-  フロート: 右;
-  フォントサイズ: 25px;
-  パディング: 21px 0;
-  表示: なし;
+.contact-info {
+    padding: 4rem;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
 }
 
-。クリア {
-  クリア：左;
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
 }
 
-@media all および (最大幅: 1000px) {
-  。レッスン {
-    幅: 50%;
-    下部マージン: 50px;
-  }
-
-  .lesson-wrapper {
-    高さ: 990ピクセル;
-  }
-
-  フッター {
-    テキスト配置: 中央;
-  }
+.contact-info p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    opacity: 0.9;
 }
 
-@media all および (最大幅: 750px) {
-  .トップラッパー h1 {
-    フォントサイズ: 32px;
-  }
-
-  .見出し h2 {
-    フォントサイズ: 20px;
-  }
+.contact-details {
+    margin-top: 2rem;
 }
 
-@media all および (最大幅: 670px) {
-  .header-right {
-    表示: なし;
-  }
-
-  .メニューアイコン{
-    表示: ブロック;
-  }
-
-  .トップラッパー .btn {
-    幅: 100%;
-  }
-
-  .twitter {
-    上マージン: 10px;
-  }
-
-  .トップラッパー{
-    テキスト配置: 左;
-  }
-
-  .トップラッパー h1 {
-    フォントサイズ: 24px;
-  }
-
-  .トップラッパーp {
-    フォントサイズ: 14px;
-  }
-
-  。レッスン {
-    幅: 100%;
-  }
-
-  .lesson-wrapper {
-    高さ: 1700ピクセル;
-  }
-
-  .メッセージラッパー .btn {
-    幅: 100%;
-  }
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
 }
+
+.contact-item i {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.contact-form {
+    padding: 4rem;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.required {
+    color: #dc3545;
+    margin-left: 0.2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 0;
+    border: none;
+    border-bottom: 2px solid #eee;
+    background: transparent;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.input-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #007bff;
+    transition: width 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+}
+
+.form-group input:focus + .input-border,
+.form-group textarea:focus + .input-border {
+    width: 100%;
+}
+
+.submit-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button span {
+    margin-right: 1rem;
+}
+
+.submit-button i {
+    transition: transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #0056b3;
+}
+
+.submit-button:hover i {
+    transform: translateX(5px);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 968px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info,
+    .contact-form {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 4rem 1rem;
+    }
+} 
+
+/* フッター */
+.footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 5rem 5% 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+/* フッターロゴとソーシャルリンク */
+.footer-logo h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer-description {
+    color: #999;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #007bff;
+    transform: translateY(-3px);
+}
+
+/* フッターセクション共通 */
+.footer-section h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background: #007bff;
+}
+
+/* フッターリンク */
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #999;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+/* コンタクト情報 */
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    color: #999;
+}
+
+.contact-info i {
+    margin-right: 1rem;
+    color: #007bff;
+}
+
+/* フッターボトム */
+.footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.copyright {
+    color: #666;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-bottom-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: #fff;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .footer-grid {
+        gap: 2rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom-links {
+        justify-content: center;
+    }
+} 
