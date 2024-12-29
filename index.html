@@ -1,90 +1,211 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>モダンなウェブサイト</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">レッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
-      </div>
-    </div>
-  </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-      </div>
-    </div>
-  </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
-      </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
-          </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>BRAND</h1>
         </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
-          </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
+        <div class="nav-links">
+            <a href="#home">ホーム</a>
+            <a href="#services">サービス</a>
+            <a href="#about">会社概要</a>
+            <a href="#contact">お問い合わせ</a>
         </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
-          </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
-          </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>未来を創造する</h1>
+            <p>革新的なソリューションで、あなたのビジネスを次のステージへ</p>
+            <a href="#services" class="cta-button">詳しく見る</a>
         </div>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
-      </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
-    </div>
-  </footer>
+    </section>
+
+    <!-- サービスセクション -->
+    <section id="services" class="services">
+        <h2>サービス</h2>
+        <div class="service-cards">
+            <div class="card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Webデザイン</h3>
+                <p>モダンで使いやすいウェブサイトを制作します</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>アプリ開発</h3>
+                <p>ニーズに合わせたアプリケーションを開発します</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>マーケティング</h3>
+                <p>データ分析に基づく効果的な戦略を提案します</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 会社概要セクション -->
+    <section id="about" class="about">
+        <h2 class="section-title">ABOUT US</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://via.placeholder.com/400" alt="会社画像">
+                <div class="image-overlay"></div>
+            </div>
+            <div class="about-text">
+                <span class="subtitle">私たちについて</span>
+                <h3>未来を見据えた<br>ソリューションを。</h3>
+                <p class="description">革新的なソリューションを提供し、<br>お客様のビジネスの成長をサポートします。</p>
+                <div class="company-info">
+                    <div class="info-item">
+                        <span class="label">創業</span>
+                        <span class="value">2020年</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">従業員数</span>
+                        <span class="value">50名</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">所在地</span>
+                        <span class="value">東京都渋谷区</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせセクション -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">CONTACT</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>お気軽にお問い合わせください</h3>
+                <p>ご質問やご相談など、お気軽にお寄せください。<br>通常2営業日以内にご返信いたします。</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@example.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>03-1234-5678</span>
+                    </div>
+                </div>
+            </div>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">お名前<span class="required">*</span></label>
+                    <input type="text" id="name" required>
+                    <div class="input-border"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">メールアドレス<span class="required">*</span></label>
+                    <input type="email" id="email" required>
+                    <div class="input-border"></div>
+                </div>
+                <div class="form-group">
+                    <label for="message">メッセージ<span class="required">*</span></label>
+                    <textarea id="message" required></textarea>
+                    <div class="input-border"></div>
+                </div>
+                <button type="submit" class="submit-button">
+                    <span>送信する</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <!-- 会社情報 -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>BRAND</h3>
+                    </div>
+                    <p class="footer-description">
+                        革新的なソリューションで、<br>
+                        ビジネスの未来を創造する。
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- クイックリンク -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">ホーム</a></li>
+                        <li><a href="#services">サービス</a></li>
+                        <li><a href="#about">会社概要</a></li>
+                        <li><a href="#contact">お問い合わせ</a></li>
+                    </ul>
+                </div>
+
+                <!-- サービス -->
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Webデザイン</a></li>
+                        <li><a href="#services">アプリ開発</a></li>
+                        <li><a href="#services">マーケティング</a></li>
+                        <li><a href="#services">コンサルティング</a></li>
+                    </ul>
+                </div>
+
+                <!-- お問い合わせ情報 -->
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>〒150-0002<br>東京都渋谷区渋谷1-1-1</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>03-1234-5678</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@example.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- コピーライトと追加リンク -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2024 BRAND. All rights reserved.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">プライバシーポリシー</a>
+                    <a href="#">利用規約</a>
+                    <a href="#">サイトマップ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 
